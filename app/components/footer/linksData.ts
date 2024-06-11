@@ -3,25 +3,25 @@ import { LinkType } from '@/app/types'
 export const LinksData: LinkType[] = [
   {
     href: '/',
-    title: 'Home',
+    title: 'خانه',
     icon:"home",
 
   },
   {
     href: '/lessons',
-    title: 'lessons',
+    title: 'درس ها',
     icon:"home",
 
   },
   {
     href: '/practices',
-    title: 'practices',
+    title: 'تمرین ها',
     icon:"home",
 
   },
   {
     href: '/profile',
-    title: 'Profile',
+    title: 'پروفایل',
     icon:"home",
 
   },

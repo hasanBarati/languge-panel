@@ -2,3 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-custom: 'CustomFont', sans-serif;
+  --footer-height:5rem
+}
+
+body {
+  font-family: var(--font-custom);
+}
+
+.font-custom {
+  font-family: var(--font-custom);
+}
+
+/* .container{
+    height:"calc(100vh-30px)"
+  } */
+@layer components {
+  .container {
+    @apply h-[calc(100vh-var(--footer-height)-3rem)] relative;
+  }
+}
+ 

@@ -9,7 +9,7 @@ export default function LinkItem() {
   const pathname = usePathname()
 
   return (
-    <div className='flex justify-between gap-4 p-2 items-center  h-20 w-svw border border-t-2 fixed bottom-0 '>
+    <div className='flex justify-between gap-4 p-2 items-center  h-footerHeight w-svw border border-t-2 fixed bottom-0 '>
       {Children.toArray(
         LinksData.map(link => (
           <Link href={link.href} className='flex flex-col items-center text-sm'>
