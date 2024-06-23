@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize:{
+        xsm:'0.8rem'
+      },
       fontFamily:{
         custom: ['var(--font-custom)', 'sans-serif'],
       },

@@ -20,7 +20,8 @@ body {
   } */
 @layer components {
   .container {
-    @apply h-[calc(100vh-var(--footer-height)-3rem)] relative;
+    @apply  min-h-[calc(100svh-var(--footer-height)-3rem)] relative;
   }
 }
  
+

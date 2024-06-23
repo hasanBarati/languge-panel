@@ -13,3 +13,11 @@ export interface SvgSpriteType{
     width?:number
     height?:number
 }
+
+
+export interface ProductType{
+    id:number
+    name:string
+    price:number
+    tag:string
+}
