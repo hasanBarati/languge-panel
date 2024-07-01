@@ -1,9 +1,21 @@
-import React from 'react'
+import { fetchLessonDetail, fetchSeasons } from '@/app/actions/lesson-details'
+import Header from './header'
+import Seasons from './seasons'
 
-function LessonDetail() {
+
+export default async function LessonDetail({
+  params,
+}: {
+  params: { tag: string }
+}) {
+  const lessonDetail = await fetchLessonDetail(params.tag)
+  const seasonsData = await fetchSeasons(params.tag)
+
   return (
-    <div>LessonDetail</div>
+    <div className=' p-4'>
+      <Header data={lessonDetail} />
+      <hr className='my-4'/>
+      <Seasons data={seasonsData} />
+    </div>
   )
 }
-
-export default LessonDetail

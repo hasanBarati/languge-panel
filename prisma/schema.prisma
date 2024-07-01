@@ -1,15 +1,12 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -17,9 +14,32 @@ model Lessons {
   id            Int @id @default(autoincrement())
   name          String
   description   String
-  tag           String  
+  tag           String @unique
+  tagName       String
+  category      String? 
   price         Int
+  image         String?
   invoiceStatus String
   createdAt     DateTime?  @default(now()) @map(name: "created_at")
   updatedAt     DateTime?  @updatedAt @map(name: "updated_at")
+}
+model LessonDetail {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String?
+  tag         String? @unique
+  image       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+
+model Seasons {
+  id          Int      @id @default(autoincrement())
+  name        String
+  tag         String  
+  image       String?
+  qunatity    Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

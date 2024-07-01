@@ -20,12 +20,8 @@ export default function RootLayout({
     <html lang='fa' dir='rtl'>
       <body className={` ${customFont.className}`}>
         <Header />
-        <div className='container'>
-        {children}
-        </div>
+        <div className='container'>{children}</div>
         <Footer />
-    
-
       </body>
     </html>
   )

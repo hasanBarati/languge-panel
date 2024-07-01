@@ -33,7 +33,7 @@ const CarouselComponent = ({
 
   return (
     <div className='p-2'>
-      <h2 className='text-md font-bold mb-4 mx-4'>{title}</h2>
+      <h2 className=' mb-4 mx-4'>{title}</h2>
       <Slider {...settings}>
         {items.map((item, index) => (
           <Link href={`/lesson-details/${item.tag}`} key={index}>
@@ -41,10 +41,10 @@ const CarouselComponent = ({
               <Cart.Picture
                 src='/images/header-banner.jpeg'
                 alt='This is me'
-                type='avatar'
+             
               />
               <Cart.Body>
-                <Cart.Tag tag={item.tag} />
+                <Cart.Tag tagname={item.tagName} />
                 <Cart.Header title={item.name} />
                 <Cart.Price price={item.price} />
               </Cart.Body>

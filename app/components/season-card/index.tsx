@@ -1,8 +1,7 @@
 import Image from 'next/image'
-import ButtonClient from './button'
 import { ReactNode } from 'react'
 
-function Cart({ children }:{children:ReactNode}) {
+function SeasonCart({ children }:{children:ReactNode}) {
   return (
     <div dir='rtl'  className=' rounded-lg  border-2 p-2 flex gap-4  mx-2 [&>*]:text-xsm'>
       {children}
@@ -17,22 +16,15 @@ function Header({ title }: { title: string }) {
     </div>
   )
 }
-function Tag({ tagname }: { tagname?: string }) {
-  return <p className=' text-gray-400'>{tagname}</p>
-}
-function Price({ price }: { price: number }) {
-  return (
-    <div className='mt-2'>
-      <p className=' '>{price} تومان</p>
-    </div>
-  )
+function Tag({ qunatity,title }: { qunatity: number,title:string }) {
+  return <p className=' text-gray-400'>{qunatity} {title}</p>
 }
 
 function Body({ children }:{children:ReactNode}) {
-  return <div>{children}</div>
+  return <div className='flex flex-col justify-center gap-2'>{children}</div>
 }
 
-function Picture({ src, alt}:{src:string,alt:string}) {
+function Picture({ src, alt }:{src:string,alt:string}) {
   return (
     <Image
       //   className={`Card__image${type ? ' Card__image--' + type : ''}`}
@@ -43,11 +35,11 @@ function Picture({ src, alt}:{src:string,alt:string}) {
     />
   )
 }
-Cart.Header = Header
-Cart.Picture = Picture
-Cart.Tag = Tag
-Cart.Button = ButtonClient
-Cart.Body = Body
-Cart.Price = Price
+SeasonCart.Header = Header
+SeasonCart.Picture = Picture
+SeasonCart.Tag = Tag
 
-export default Cart
+SeasonCart.Body = Body
+
+
+export default SeasonCart

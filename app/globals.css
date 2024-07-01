@@ -4,12 +4,16 @@
 
 :root {
   --font-custom: 'CustomFont', sans-serif;
-  --footer-height:5rem
+  --footer-height: 5rem;
 }
 
 body {
   font-family: var(--font-custom);
 }
+
+/* p {
+  font-size: 14px;
+} */
 
 .font-custom {
   font-family: var(--font-custom);
@@ -18,10 +22,17 @@ body {
 /* .container{
     height:"calc(100vh-30px)"
   } */
-@layer components {
-  .container {
-    @apply  min-h-[calc(100svh-var(--footer-height)-3rem)] relative;
+@layer base {
+  p {
+    @apply text-sm;
+  }
+  h2{
+    @apply  text-base font-bold
   }
 }
- 
+  @layer components {
+    .container {
+      @apply min-h-[calc(100svh-var(--footer-height)-3rem)] relative;
+    }
+  }
 

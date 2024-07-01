@@ -20,4 +20,16 @@ export interface ProductType{
     name:string
     price:number
     tag:string
+    description?:string
+    category?:string | null
+    tagName?:string 
+}
+
+
+
+export interface Season{
+    id:number
+    name:string
+    qunatity:number
+    image:string | null
 }
