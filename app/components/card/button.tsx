@@ -1,6 +1,6 @@
 'use client';
 
-function ButtonClient({ text }) {
+function ButtonClient({ text }:{text:string}) {
   return (
     <button className='Card__button' onClick={() => console.log("run")}>
       {text}

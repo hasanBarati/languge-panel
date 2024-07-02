@@ -1,7 +1,7 @@
 import { fetchLessonDetail, fetchSeasons } from '@/app/actions/lesson-details'
 import Header from './header'
 import Seasons from './seasons'
-
+import Content from './content'
 
 export default async function LessonDetail({
   params,
@@ -12,10 +12,13 @@ export default async function LessonDetail({
   const seasonsData = await fetchSeasons(params.tag)
 
   return (
-    <div className=' p-4'>
+    <div className=' '>
       <Header data={lessonDetail} />
-      <hr className='my-4'/>
-      <Seasons data={seasonsData} />
+      <div className='p-4'>
+        <Content data={lessonDetail} />
+        <hr className='my-4' />
+        <Seasons data={seasonsData} />
+      </div>
     </div>
   )
 }

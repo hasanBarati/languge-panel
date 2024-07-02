@@ -12,6 +12,8 @@ export interface SvgSpriteType{
     color?:string
     width?:number
     height?:number
+    className?:string
+    onClick?:()=>void
 }
 
 

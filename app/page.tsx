@@ -1,4 +1,5 @@
 import CarouselComponent from './components/carosel'
+import Header from './components/header'
 import { db } from './db'
 import { ProductType } from './types'
 
@@ -25,6 +26,7 @@ export default async function Home() {
 
   return (
     <main>
+        <Header />
       {/* <div style={{ position: 'relative', width: '100vw', height: '50vh' }}>
         <Image
           src='/images/header-banner.jpeg'

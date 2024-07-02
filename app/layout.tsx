@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Footer from './components/footer'
 import customFont from './font'
 import './globals.css'
-import Header from './components/header'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang='fa' dir='rtl'>
       <body className={` ${customFont.className}`}>
-        <Header />
         <div className='container'>{children}</div>
         <Footer />
       </body>
